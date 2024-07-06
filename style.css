@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+    --cor-azul-escuro: #0A3871;
+    --cor-cinza: #D8DFE8;
+    --cor-cinza-escuro: #495057;
+    --fonte: "Inter", sans-serif;
+    --cor-branca: #FFFFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color: #F3F5FC;
+    color: black;
+}
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+.inicio__esquerda{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0% 0% 0% 5%;
+}
+.inicio__alura{
+    padding: 0%;
+}
+.inicio__cabecalho{
+    padding: 0;
+    font-family: var(--fonte);
+    color: var(--cor-azul-escuro);
+    font-weight: 400;
+    font-size: 24px;
+}
+.inicio__texto{
+    width: 100%;
+    height: 35rem;
+    border: none;
+    border-radius: 24px;
+    padding: 9rem;
+    font-family: var(--fonte);
+    background-color: var(--cor-branca);
+}
+
+
+.inicio__esquerda__regra{
+    padding: 3%;
+    font-family: var(--fonte);
+    color: var(--cor-cinza-escuro);
+    font-weight: 400;
+    font-size: 12px;
+}
+.inicio__botao__regra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 55%;
+}
+
+.inicio__botao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    gap: 24px;
+    width: 50%;
+}
+.inicio__botao__criptografar{
+    background-color: var(--cor-azul-escuro);
+    color: var(--cor-branca);
+    padding: 7% 40%;
+    border-radius: 24px;
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 300;
+}
+.inicio__botao__descriptografar{
+    background-color: var(--cor-cinza);
+    color: var(--cor-azul-escuro);
+    padding: 7% 35%;
+    border-radius: 24px;
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 300;
+}
+.inicio__direita{
+    display: flex;
+    background-color: var(--cor-branca);
+    flex-direction: column;
+    gap: 3px;
+    border-radius: 32px;
+    padding: 15% 2%;
+}
+.inicio__direita__subtitulo{
+    font-family: var(--fonte);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 6% 20%;
+    display: flex;
+    justify-items: center;
+}
+.inicio__direita__mensagem{
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    padding: 2% 20%;
+}
