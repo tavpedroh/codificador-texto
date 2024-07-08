@@ -115,3 +115,9 @@ body{
     display: flex;
     padding: 2% 20%;
 }
+.rodape{
+    padding: 2% 8%;
+    font-size: 20px;
+    font-family: var(--fonte);
+    font-weight: 200;
+}
