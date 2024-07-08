@@ -47,18 +47,9 @@ body{
     font-weight: 200;
     font-size: 15px;
 }
-.inicio__texto{
-    width: 100%;
-    height: 35rem;
-    border: none;
-    border-radius: 24px;
-    padding: 9rem;
+.input{
     font-family: var(--fonte);
-    background-color: var(--cor-branca);
-    align-content: flex-start;
 }
-
-
 .inicio__esquerda__regra{
     padding: 3%;
     font-family: var(--fonte);
@@ -100,6 +91,7 @@ body{
     font-size: 16px;
     font-weight: 300;
 }
+
 .inicio__direita{
     display: flex;
     background-color: var(--cor-branca);
@@ -108,6 +100,7 @@ body{
     border-radius: 32px;
     padding: 1.5rem 3rem 2rem 2rem;
     width: 20%;
+    align-items: center;
 }
 .inicio__direita__subtitulo{
     font-family: var(--fonte);
@@ -115,8 +108,8 @@ body{
     font-weight: 500;
     padding: 0px 0px 0px 0px;
     display: flex;
-    align-content:baseline ;
-    width: 20%;
+    flex-direction: column;
+    align-items: center;
 }
 .inicio__direita__mensagem{
     font-family: var(--fonte);
@@ -137,12 +130,13 @@ body{
     font-family: var(--fonte);
     font-weight: 200;
 }
-.rodape__botao{
+.inicio__botao__copiar{
     background-color: var(--cor-cinza);
     color: var(--cor-azul-escuro);
-    padding: 7% 35%;
+    padding: 24px 10%;
     border-radius: 24px;
     font-family: var(--fonte);
     font-size: 16px;
     font-weight: 300;
+    width: 18rem;
 }
