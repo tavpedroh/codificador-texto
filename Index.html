@@ -20,7 +20,7 @@
                 <h5 class="inicio__esquerda__regra">Apenas letras minúsculas e sem acento</h5>
                 <div class="inicio__botao">
                     <button onclick="exibirTextoCriptografado()" class="inicio__botao__criptografar">Criptografar Texto</button>
-                    <button onclick="descriptografar()" class="inicio__botao__descriptografar">Descriptografar</button>
+                    <button onclick="exibirTextoDescriptografado()" class="inicio__botao__descriptografar">Descriptografar</button>
                 </div>
             </section>
         </section>
@@ -34,24 +34,5 @@
         </section>
     </main>
     <footer class="rodape"> <h4 class="rodape__texto">Site desenvolvido por Pedro Henrique Tavares Pinto<h4> </footer>
-    <script>
-        function exibirTextoCriptografado() {
-            document.getElementById('imagem').style.display = 'none';
-            document.getElementById('descricao').style.display = 'none';
-            let textoOriginal = document.getElementById('textoOriginal').value;
-            let textoCriptografado = criptografar(textoOriginal);
-            let elementoTextoCriptografado = document.getElementById('textoCriptografado');
-            elementoTextoCriptografado.textContent = textoCriptografado;
-        }
-        function Copiar(){
-            var textoCopiar = document.getElementById('textoCriptografado').innerText;
-            var aux = document.createElement('textarea');
-            aux.value = textoCopiar;
-            document.body.appendChild(aux);
-            aux.select();
-            document.execCommand('copy');
-            document.body.removeChild(aux);
-        }
-    </script>
 </body>
 </html>
