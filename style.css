@@ -44,18 +44,25 @@ body{
     padding: 0;
     font-family: var(--fonte);
     color: var(--cor-cinza-escuro);
-    font-weight: 200;
-    font-size: 15px;
+    font-weight: 300;
+    font-size: 17px;
 }
 .input{
     font-family: var(--fonte);
 }
+.inicio__esquerda__obs{
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+}
+
 .inicio__esquerda__regra{
-    padding: 3%;
+    display: inline-block;
     font-family: var(--fonte);
     color: var(--cor-cinza-escuro);
     font-weight: 400;
     font-size: 12px;
+    padding: 0px 0px 10px 0px;
 }
 .inicio__botao__regra{
     display: flex;

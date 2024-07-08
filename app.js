@@ -23,53 +23,49 @@ function descriptografar(texto) {
 
 
 function substituirLetras(texto, tabela, invertido = false) {
-    let textoCriptografado = '';
-    if(invertido){
-        for(let chave in tabela){
+    if (invertido) {
+        for (let chave in tabela) {
             let valor = tabela[chave];
-            let regex = new RegExp(chave,'g');
-            texto = texto.replace(regex.valor);
+            let regex = new RegExp(chave, "g");
+            texto = texto.replace(regex, valor);
         }
         return texto;
     } else {
+        let textoAlterado = '';
         for (let i = 0; i < texto.length; i++) {
             let letra = texto[i].toLowerCase();
             if (letra in tabela) {
-                textoCriptografado += tabela[letra];
+                textoAlterado += tabela[letra];
             } else {
-                textoCriptografado += texto[i];
+                textoAlterado += texto[i];
             }
         }
-        return textoCriptografado;
+        return textoAlterado;
     }
 }
 
 
 function exibirTextoCriptografado() {
-    let textoOriginal = document.getElementById('textoOriginal').value;
-    let textoCriptografado = criptografar(textoOriginal);
-    let elementoTextoCriptografado = document.getElementById('textoCriptografado');
-    elementoTextoCriptografado.innerText = textoCriptografado;
     Ocultar();
+    let textoOriginal = document.getElementById('texto').value;
+    let textoCriptografado = criptografar(textoOriginal);
+    document.getElementById('resultado').textContent = textoCriptografado;
 }
 function exibirTextoDescriptografado(){
-    let textoCriptografado = document.getElementById('textoOriginal').value;
-    let TextoDescriptografado = descriptografar(textoCriptografado);
-    let elementoTextoDescriptografado = document.getElementById('textoDescriptografado');
-    elementoTextoDescriptografado.innerText = TextoDescriptografado;
     Ocultar();
+    let textoCriptografado = document.getElementById('texto').value;
+    let textoDescriptografado = descriptografar(textoCriptografado);
+    document.getElementById('resultado').textContent = textoDescriptografado;
 }
-
-
 
 
 function Copiar(){
-    var textoCopiar = document.getElementById('textoCriptografado').innerText;
+    var textoCopiar = document.getElementById('resultado').innerText;
     var aux = document.createElement('textarea');
     aux.value = textoCopiar;
     document.body.appendChild(aux);
     aux.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(aux);
 }
 

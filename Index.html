@@ -12,14 +12,16 @@
     <main class="inicio">
         <section class="inicio__esquerda">
             <h2 class="inicio__cabecalho">Criptografador de Textos</h2>
-            <label class="inicio__texto__subtitulo" for="textoOriginal">Digite o texto a ser criptografado:</label>
             <br>
-            <textarea id="textoOriginal" rows="4" cols="50" class="Input"></textarea>
+            <textarea id="texto" rows="4" cols="50" class="Input"></textarea>
             <br>
             <section class="inicio__botao__regra">
-                <h5 class="inicio__esquerda__regra">Apenas letras minúsculas e sem acento</h5>
+                <div class="inicio__esquerda__obs">
+                    <img src="./images/exclamacao.png">
+                    <h5 class="inicio__esquerda__regra">Apenas letras minúsculas e sem acento</h5>
+                </div>
                 <div class="inicio__botao">
-                    <button onclick="exibirTextoCriptografado()" class="inicio__botao__criptografar">Criptografar Texto</button>
+                    <button onclick="exibirTextoCriptografado()" class="inicio__botao__criptografar">Criptografar</button>
                     <button onclick="exibirTextoDescriptografado()" class="inicio__botao__descriptografar">Descriptografar</button>
                 </div>
             </section>
@@ -27,7 +29,7 @@
         <section class="inicio__direita">
             <img src="./images/Imagem pessoa-lupa.png" alt="Imagem simbolica" id="imagem">
             <br><br>
-            <h3 class="inicio__direita__subtitulo" id="textoCriptografado"></h3>
+            <h3 class="inicio__direita__subtitulo" id="resultado"></h3>
             <p class="inicio__direita__mensagem" id="descricao">Digite um texto que você deseja criptografar ou descriptografar</p>
             <br><br>
             <button onclick="Copiar()" class="inicio__botao__copiar">Copiar</button>
