@@ -106,15 +106,17 @@ body{
     flex-direction: column;
     gap: 3px;
     border-radius: 32px;
-    padding: 15% 2%;
+    padding: 1.5rem 3rem 2rem 2rem;
+    width: 20%;
 }
 .inicio__direita__subtitulo{
     font-family: var(--fonte);
     font-size: 24px;
     font-weight: 500;
-    padding: 6% 20%;
+    padding: 0px 0px 0px 0px;
     display: flex;
-    justify-items: center;
+    align-content:baseline ;
+    width: 20%;
 }
 .inicio__direita__mensagem{
     font-family: var(--fonte);
@@ -124,8 +126,23 @@ body{
     padding: 2% 20%;
 }
 .rodape{
-    padding: 2% 8%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+}
+.rodape__texto{
+    display: flex;
+    padding: -3rem -3rem;
     font-size: 20px;
     font-family: var(--fonte);
     font-weight: 200;
+}
+.rodape__botao{
+    background-color: var(--cor-cinza);
+    color: var(--cor-azul-escuro);
+    padding: 7% 35%;
+    border-radius: 24px;
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-weight: 300;
 }

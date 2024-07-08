@@ -6,11 +6,6 @@
     <title>Decodificador</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <style>
-        .oculto{
-            display: none;
-        }
-    </style>
 </head>
 <header class="inicio__alura"><img src="./images/Alura.png" alt="Logo da Alura"></header>
 <body>
@@ -32,17 +27,31 @@
         <section class="inicio__direita">
             <img src="./images/Imagem pessoa-lupa.png" alt="Imagem simbolica" id="imagem">
             <h3 class="inicio__direita__subtitulo" id="textoCriptografado">Nehuma mensagem encontrada</h3>
-            <p class="inicio__direita__mensagem" >Digite um texto que você deseja criptografar ou descriptografar</p>
+            <p class="inicio__direita__mensagem" id="descricao">Digite um texto que você deseja criptografar ou descriptografar</p>
         </section>
     </main>
+    <footer class="rodape">
+        <h4 class="rodape__texto">Site desenvolvido por Pedro Henrique Tavares Pinto<h4>
+        <button onclick="Copiar()" class="rodape__botao">Copiar</button>
+    </footer>
     <script>
         function exibirTextoCriptografado() {
+            document.getElementById('imagem').style.display = 'none';
+            document.getElementById('descricao').style.display = 'none';
             let textoOriginal = document.getElementById('textoOriginal').value;
             let textoCriptografado = criptografar(textoOriginal);
             let elementoTextoCriptografado = document.getElementById('textoCriptografado');
             elementoTextoCriptografado.textContent = textoCriptografado;
         }
+        function Copiar(){
+            var textoCopiar = document.getElementById('textoCriptografado').innerText;
+            var aux = document.createElement('textarea');
+            aux.value = textoCopiar;
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand('copy');
+            document.body.removeChild(aux);
+        }
     </script>
-    <footer class="rodape">Site desenvolvido por Pedro Henrique Tavares Pinto</footer>
 </body>
 </html>
