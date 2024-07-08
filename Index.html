@@ -5,28 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador</title>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <header><div class="inicio__alura"><img src="./images/alura.png" alt="Logo alura"></div></header>
 <body>
     <main class="inicio">
         <section class="inicio__esquerda">
             <h1 class="inicio__cabecalho">Digite seu texto</h1>
-            <input type="text" id="entrada" class="inicio__texto">
+            <label for="textoOriginal">Digite o texto a ser criptografado:</label>
+            <br>
+            <textarea id="textoOriginal" rows="4" cols="50" class=""></textarea>
+            <br>
             <section class="inicio__botao__regra">
                 <h5 class="inicio__esquerda__regra">Apenas letras minúsculas e sem acento</h5>
                 <div class="inicio__botao">
-                    <button onclick="criptografar()" class="inicio__botao__criptografar">Criptografar</button>
+                    <button onclick="exibirTextoCriptografado()" class="inicio__botao__criptografar">Criptografar</button>
                     <button onclick="descriptografar()" class="inicio__botao__descriptografar">Descriptografar</button>
                 </div>
             </section>
+            
         </section>
         <section class="inicio__direita">
             <img src="./images/Imagem pessoa-lupa.png" alt="Imagem simbolica" id="image">
             <h3 class="inicio__direita__subtitulo">Nehuma mensagem encontrada</h3>
-            <p class="inicio__direita__mensagem">Digite um texto que você deseja criptografar ou descriptografar</p>
+            <p class="inicio__direita__mensagem" id="textoCriptografado">Digite um texto que você deseja criptografar ou descriptografar</p>
         </section>
     </main>
     <footer class="rodape">Site desenvolvido por Pedro Henrique Tavares Pinto</footer>
-    <script src="app.js" defer></script>
+    
+    <script>
+        function exibirTextoCriptografado() {
+            let textoOriginal = document.getElementById('textoOriginal').value;
+            let textoCriptografado = criptografar(textoOriginal);
+            let elementoTextoCriptografado = document.getElementById('textoCriptografado');
+            elementoTextoCriptografado.textContent = textoCriptografado;
+        }
+    </script>
 </body>
 </html>
