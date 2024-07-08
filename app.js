@@ -1,34 +1,23 @@
-const substituicoes ={
-    'a' : 'ai',
-    'e' : 'enter',
-    'i' : 'imes',
-    'o' : 'ober',
-    'u' : 'ufat'
+const substituicoes = {
+    'e': 'enter',
+    'i': 'imes',
+    'a': 'ai',
+    'o': 'ober',
+    'u': 'ufat'
 };
-/*
-function exibirTextoNaTela(tag,texto){
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
-}
-
-let input = document.querySelector(entrada);
-let texto = input.value;
-*/
-function criptografar(texto){
-    let textoCriptografado = substituirletras(texto);
+function criptografar(texto) {
+    let textoCriptografado = substituirLetras(texto);
     return textoCriptografado;
 }
-
-function substituirletras(texto){
+function substituirLetras(texto) {
     let textoCriptografado = '';
-    for(let i=0;i<texto.length;i++){
-        let letra = texto[i].tolowercase();
-        if(letra in substituicoes) 
+    for (let i = 0; i < texto.length; i++) {
+        let letra = texto[i].toLowerCase();
+        if (letra in substituicoes) {
             textoCriptografado += substituicoes[letra];
-        else 
-            textoCriptografado +=texto[i];
+        } else {
+            textoCriptografado += texto[i];
+        }
     }
     return textoCriptografado;
 }
-
-//<input type="text" id="textoOriginal" class="inicio__texto">

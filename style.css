@@ -19,7 +19,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3%;
+    padding: 0%;
 }
 
 .inicio__esquerda{
@@ -27,11 +27,11 @@ body{
     flex-direction: column;
     padding: 0;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 3rem;
     padding: 0% 0% 0% 5%;
 }
 .inicio__alura{
-    padding: 0%;
+    padding: 6% 0% 0% 3%;
 }
 .inicio__cabecalho{
     padding: 0;
@@ -39,6 +39,13 @@ body{
     color: var(--cor-azul-escuro);
     font-weight: 400;
     font-size: 24px;
+}
+.inicio__texto__subtitulo{
+    padding: 0;
+    font-family: var(--fonte);
+    color: var(--cor-cinza-escuro);
+    font-weight: 200;
+    font-size: 15px;
 }
 .inicio__texto{
     width: 100%;
